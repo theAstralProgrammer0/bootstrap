@@ -1,4 +1,6 @@
-
+body{
+    background-color: aliceblue;
+}
 .row-header{
     margin: 0px auto;
     padding: 0px auto;
@@ -40,7 +42,7 @@
 .jumbotron{
     margin: 0px auto;
     padding: 70px 30px 70px 30px;
-    background: #9575cd;
+    background-color: darkcyan;
     color: floralwhite;
 }
 
