@@ -40,7 +40,11 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand mr-auto" href="#"
-          ><img src="./img/logo.png" class="img-fluid" width="30" height="41"
+          ><img
+            src="./img/logo.png"
+            class="img-fluid ml-3"
+            width="30"
+            height="41"
         /></a>
         <div class="collapse navbar-collapse" id="Navbar">
           <ul class="navbar-nav mr-auto">
@@ -65,10 +69,68 @@
               >
             </li>
           </ul>
+
+          <span class="navbar-text">
+            <a data-toggle="modal" data-target="#loginModal">
+              <span class="fa fa-sign-in"></span> Login
+            </a>
+          </span>
         </div>
       </div>
     </nav>
-    <header class="jumbotron">
+    <!-- Modal -->
+
+    <div id="loginModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="content">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Login</h4>
+            <button class="close" type="button" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter email"
+                />
+                <small id="emailHelp" class="form-text text-muted"
+                  >We'll never share your email with anyone else.</small
+                >
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="Password"
+                />
+              </div>
+              <div class="form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="modalCheckbox"
+                />
+                <label class="form-check-label" for="subscribe"
+                  >yes, I want to subscribe</label
+                >
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header class="jumbotron" id="jumbo">
       <div class="container">
         <div class="row row-header">
           <div class="col-12 col-sm-6">
@@ -80,10 +142,20 @@
             </p>
           </div>
           <div class="col-12 col-sm-3 align-self-center">
-            <img src="./img/logo.png" alt="grid-image-tester" />
+            <img
+              class="col-12 d-none d-sm-block"
+              src="./img/logo.png"
+              alt="grid-image-tester"
+            />
           </div>
-          <div class="col-12 col-sm-3 align-self-center">
-            <a class="btn btn-warning" href="#guest-num-6"
+          <div class="col-auto align-self-center">
+            <a
+              class="btn btn-warning btn-lg btn-block justify-content-center"
+              data-toggle="tooltip"
+              data-html="true"
+              data-placement="bottom"
+              title="call us <br><strong>+1(650)-935-4263</strong>"
+              href="#guest-num-row"
               >Make a Reservation Now</a
             >
           </div>
@@ -129,7 +201,7 @@
           <div class="media">
             <img
               src="./img/buffet.png"
-              class="img-fluid rounded-top rounded-bottom ml-3 order-sm-last align-self-center"
+              class="img-fluid rounded-top rounded-bottom mr-3 order-sm-last align-self-center"
               alt="buffet"
             />
             <div class="media-body">
@@ -171,7 +243,7 @@
         </div>
       </div>
 
-      <div class="row row-content">
+      <div class="row row-content" id="guest-num-row">
         <div class="col-12 col-sm-8">
           <div class="card">
             <h3 class="card-header">Reserve Table Here</h3>
@@ -249,6 +321,10 @@
                           type="date"
                           class="form-control"
                           placeholder="Date"
+                          data-toggle="tooltip"
+                          data-html="true"
+                          data-placement="left"
+                          title="select a date"
                         />
                       </div>
                       <div class="col">
@@ -256,6 +332,10 @@
                           type="time"
                           class="form-control"
                           placeholder="Time"
+                          data-toggle="tooltip"
+                          data-html="true"
+                          data-placement="right"
+                          title="select a time"
                         />
                       </div>
                     </div>
@@ -270,6 +350,10 @@
                           type="text"
                           class="form-control"
                           placeholder="First name"
+                          data-toggle="tooltip"
+                          data-html="true"
+                          data-placement="left"
+                          title="type your first name"
                         />
                       </div>
                       <div class="col">
@@ -277,6 +361,10 @@
                           type="text"
                           class="form-control"
                           placeholder="Last name"
+                          data-toggle="tooltip"
+                          data-html="true"
+                          data-placement="bottom"
+                          title="type your last name"
                         />
                       </div>
                       <div class="col">
@@ -285,6 +373,10 @@
                           class="form-control"
                           id="inputEmail4"
                           placeholder="Email"
+                          data-toggle="tooltip"
+                          data-html="true"
+                          data-placement="bottom"
+                          title="enter a valid email address"
                         />
                       </div>
                     </div>
@@ -299,7 +391,29 @@
           </div>
         </div>
       </div>
+
+      <div class="row row-content">
+        <div class="col-12 col-sm-6">
+          <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+              <h1 class="display-4">Fluid jumbotron</h1>
+              <p class="lead">
+                This is a modified jumbotron that occupies the entire horizontal
+                space of its parent.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a
+        href="#jumbo"
+        class="btn btn-secondary"
+        role="button"
+        aria-pressed="true"
+        >Back to Top</a
+      >
     </div>
+    <br />
 
     <footer class="footer">
       <div class="container">
@@ -369,5 +483,10 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+      });
+    </script>
   </body>
 </html>

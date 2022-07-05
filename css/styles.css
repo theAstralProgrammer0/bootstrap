@@ -50,3 +50,21 @@ body{
     margin: 0px auto;
     font-size: 80%;
 }
+
+.btn-link{
+    text-decoration: none;
+
+}
+
+a[data-toggle="modal"]:hover{
+    cursor:pointer;
+}
+
+
+div.form-check{
+    padding-bottom: 7px;
+}
+
+label.form-check-label{
+    font-size: 80%;
+}

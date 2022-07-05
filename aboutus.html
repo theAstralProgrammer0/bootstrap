@@ -69,9 +69,67 @@
               >
             </li>
           </ul>
+
+          <span class="navbar-text">
+            <a data-toggle="modal" data-target="#loginModal">
+              <span class="fa fa-sign-in"></span> Login
+            </a>
+          </span>
         </div>
       </div>
     </nav>
+    <!-- Modal -->
+
+    <div id="loginModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="content">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Login</h4>
+            <button class="close" type="button" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Enter email"
+                />
+                <small id="emailHelp" class="form-text text-muted"
+                  >We'll never share your email with anyone else.</small
+                >
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                  placeholder="Password"
+                />
+              </div>
+              <div class="form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="modalCheckbox"
+                />
+                <label class="form-check-label" for="subscribe"
+                  >yes, I want to subscribe</label
+                >
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <header class="jumbotron">
       <div class="container">
         <div class="row row-header">
@@ -151,6 +209,12 @@
       <div class="row">
         <div class="col-12">
           <div class="card card-body bg-light">
+            <style>
+              div.card.card-body.bg-light {
+                border-left: 5px solid rebeccapurple;
+                border-radius: 6px;
+              }
+            </style>
             <blockquote class="blockquote">
               <p class="mb-0">
                 We aim at providing the best quality service to you
