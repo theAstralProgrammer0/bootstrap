@@ -87,3 +87,17 @@ label.form-check-label{
     min-height: 300px;
     border-radius: 16px;
 }
+
+div.modal-body{
+    background: darkgray;
+}
+
+div.modal-header{
+    background: darkcyan;
+}
+
+#carouselButton{
+    position: absolute;
+    right: 0px;
+    bottom: 0px
+}

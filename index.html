@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
 
     <title>Ristorante Con Fusion</title>
+    <script src="script.js" defer></script>
   </head>
 
   <body>
@@ -78,8 +79,188 @@
         </div>
       </div>
     </nav>
-    <!-- Modal -->
 
+    <!--Reserve Modal-->
+    <div id="reserveModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="content">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title">Reserve Table Here</h3>
+            <button class="close" type="button" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="card">
+              <div class="card-body">
+                <dl class="row">
+                  <dt class="col-4">Number of Guests</dt>
+                  <dd class="col-8">
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="guest-num"
+                        id="guest-num-1"
+                        value=""
+                      />
+                      <label class="form-check-label" for="guest-num">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="guest-num"
+                        id="guest-num-2"
+                        value=""
+                      />
+                      <label class="form-check-label" for="guest-num">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="guest-num"
+                        id="guest-num-3"
+                        value=""
+                      />
+                      <label class="form-check-label" for="guest-num">3</label>
+                    </div>
+
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="guest-num"
+                        id="guest-num-4"
+                        value=""
+                      />
+                      <label class="form-check-label" for="guest-num">4</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="guest-num"
+                        id="guest-num-5"
+                        value=""
+                      />
+                      <label class="form-check-label" for="guest-num">5</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="guest-num"
+                        id="guest-num-6"
+                        value=""
+                      />
+                      <label class="form-check-label" for="guest-num">6</label>
+                    </div>
+                  </dd>
+
+                  <dt class="col-4">Section</dt>
+                  <dd class="col-8">
+                    <div role="button" class="btn-group">
+                      <button type="submit" class="btn btn-dark">
+                        No Smoking
+                      </button>
+                      <button type="submit" class="btn btn-danger">
+                        Smoking
+                      </button>
+                    </div>
+                  </dd>
+
+                  <dt class="col-4">Date and Time</dt>
+                  <dd class="col-8">
+                    <form>
+                      <div class="form-row">
+                        <div class="col">
+                          <input
+                            type="date"
+                            class="form-control"
+                            placeholder="Date"
+                            data-toggle="tooltip"
+                            data-html="true"
+                            data-placement="left"
+                            title="select a date"
+                          />
+                        </div>
+                        <div class="col">
+                          <input
+                            type="time"
+                            class="form-control"
+                            placeholder="Time"
+                            data-toggle="tooltip"
+                            data-html="true"
+                            data-placement="right"
+                            title="select a time"
+                          />
+                        </div>
+                      </div>
+                    </form>
+                  </dd>
+                  <dt class="col-4">Contact info</dt>
+                  <dd class="col-8">
+                    <form>
+                      <div class="form-row">
+                        <div class="col">
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="First name"
+                            data-toggle="tooltip"
+                            data-html="true"
+                            data-placement="left"
+                            title="type your first name"
+                          />
+                        </div>
+                        <div class="col">
+                          <input
+                            type="text"
+                            class="form-control"
+                            placeholder="Last name"
+                            data-toggle="tooltip"
+                            data-html="true"
+                            data-placement="bottom"
+                            title="type your last name"
+                          />
+                        </div>
+                        <div class="col">
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="inputEmail4"
+                            placeholder="Email"
+                            data-toggle="tooltip"
+                            data-html="true"
+                            data-placement="bottom"
+                            title="enter a valid email address"
+                          />
+                        </div>
+                      </div>
+                      <br />
+                      <button
+                        data-dismiss="modal"
+                        type="button"
+                        class="btn btn-danger"
+                      >
+                        Cancel
+                      </button>
+                      <button type="submit" class="btn btn-primary">
+                        Reserve
+                      </button>
+                    </form>
+                  </dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Login Modal -->
     <div id="loginModal" class="modal fade" role="dialog">
       <div class="modal-dialog modal-dialog-centered modal-lg" role="content">
         <div class="modal-content">
@@ -151,7 +332,8 @@
           <div class="col-auto align-self-center">
             <a
               class="btn btn-warning btn-lg btn-block justify-content-center"
-              data-toggle="tooltip"
+              data-toggle="modal"
+              data-target="#reserveModal"
               data-html="true"
               data-placement="bottom"
               title="call us <br><strong>+1(650)-935-4263</strong>"
@@ -575,10 +757,5 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-      $(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-      });
-    </script>
   </body>
 </html>
