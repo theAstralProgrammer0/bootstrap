@@ -1,0 +1,108 @@
+$lt-gray: #ddd;
+$void: #0E0B16;
+$fuschia: #A239CA;
+$jewel: #4717F6;
+$stark: #E7DFDD;
+$clean: #dfdce3;
+$modal-col-head: #2c3531;
+$modal-col-body: #d1e8e2;
+
+/*Height variables*/
+$carousel-item-height: 300px;
+$row-content-min-height: 400px;
+
+// border variables
+$border-img: 10px;
+
+// Mixins
+@mixin zero-margin($pad-up-dn, $pad-left-right){
+    margin: 0px auto;
+    padding: $pad-up-dn $pad-left-right;
+}
+
+
+.row-header{
+    @include zero-margin(0px, 0px);
+}
+
+.row-content{
+    @include zero-margin(50px, 0px);
+    border-bottom: 1px ridge;
+    min-height: $row-content-min-height;
+}
+
+.footer{
+    background-color: $void;
+    @include zero-margin(20px, 0px);
+}
+
+.jumbotron{
+    @include zero-margin(70px, 30px);
+    background: $void;
+    color: $stark;
+}
+
+address{
+    font-size: 80%;
+    margin: 0px;
+    color: $lt-gray;
+}
+
+body{
+    background: $clean;
+    padding: 50px 0px 0px 0px;
+    z-index: 0;
+}
+
+.navbar-dark{
+    background-color: $void;
+}
+
+.tab-content{
+    border-left: 1px solid $stark;
+    border-right: 1px solid $stark;
+    border-bottom: 1px solid $stark;
+    padding: 10px;
+}
+
+.carousel{
+    background: $jewel;
+    border-top-left-radius: $border-img;
+    border-bottom-left-radius: $border-img;
+
+    .carousel-item{
+        height: $carousel-item-height;
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-height: $carousel-item-height;
+            border-top-left-radius: $border-img;
+            border-bottom-left-radius: $border-img;
+        }
+    }
+}
+
+#carouselButton{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+
+.modal-header{
+    background: $modal-col-head;
+    color: $stark;
+}
+.modal-body{
+    background: $modal-col-body;
+    color: $modal-col-head;
+}
+
+.card{
+    border-radius: $border-img;
+}
+.card-body{
+    background: $modal-col-body;
+    color: $void;
+}
+
