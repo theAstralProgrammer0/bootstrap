@@ -26,7 +26,7 @@ address {
   color: #ddd; }
 
 body {
-  background: #dfdce3;
+  background: green;
   padding: 50px 0px 0px 0px;
   z-index: 0; }
 
@@ -58,16 +58,13 @@ body {
   right: 0px;
   bottom: 0px; }
 
-
 .modal-header {
   background: #2c3531;
   color: #E7DFDD; }
 
 .modal-body {
   background: #d1e8e2;
-  color: #2c3531;
-}
-  
+  color: #2c3531; }
 
 .card {
   border-radius: 10px; }
@@ -75,4 +72,3 @@ body {
 .card-body {
   background: #d1e8e2;
   color: #0E0B16; }
-
